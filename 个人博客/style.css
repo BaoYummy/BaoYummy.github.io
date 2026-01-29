@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'renou'; 
+  src: url('fonts/renou.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'renou', 'Courier New', monospace;
+  background: #000 url('images/background1.gif');
+  color: #0f0;
+  margin: 2rem;
+}
+
+h1 {
+  color: #ff00ff;
+  text-align: center;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+  border-bottom: 5px dotted #00ffff;
+}
+
+.neon-text {
+  color: #ffff00; /* 亮黄色 */
+  font-family: 'Arial Black', sans-serif; /* 切换到更粗的系统字体 */
+  text-shadow: 0 0 8px #ffff00;
+  animation: blink 1s infinite; /* 闪烁动画 */
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+  background-color: black;
+  padding: 5px;
+  border: 2px solid red;
+}
+
+/* 闪烁动画效果 */
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffff00; /* 亮黄色 */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #cccccc; /* 浅灰色 */
+}
+
+a:active {
+  color: #ff00ff; /* 亮粉色 */
+}
+
+/***** 日记页专属样式 *****/
+/* 1. 日记页整体粉色主题 */
+body.diary-page {
+     background: #000 url('images/background2.gif');
+    color: #8b008b; /* 深紫色文字，与粉色背景搭配且易读 */
+    font-family: 'Georgia', 'Times New Roman', serif; /* 更优雅的衬线字体 */
+}
+
+/* 2. 为日记内容创建“文本框”效果 */
+.diary-entry {
+    background-color: #fff; /* 文本框内部为白色 */
+    border: 3px dashed #ff69b4; /* 粉色虚线边框，复古又可爱 */
+    border-radius: 15px; /* 稍微圆角，更柔和 */
+    padding: 25px; /* 内边距：让文字离边框远一点，更舒适 */
+    margin: 30px auto; /* 外边距：上下30px，左右自动（水平居中） */
+    max-width: 700px; /* 限制文本框最大宽度，避免一行文字过长 */
+    box-shadow: 5px 5px 15px rgba(255, 105, 180, 0.2); /* 添加淡淡的粉色阴影，增加立体感 */
+}
+
+/* 3. 日记页内的标题样式 */
+body.diary-page h1 {
+    color: #db7093; /* 暮光粉 */
+    text-align: center;
+    text-shadow: 2px 2px 0px #ffe4e9;
+}
+
+/* 4. 日记页内的日期样式 */
+body.diary-page h2 {
+    color: #c71585; /* 中深洋红 */
+    border-bottom: 1px dotted #ffb6c1;
+    padding-bottom: 5px;
+}
+
+/* 5. 确保日记页的链接也匹配主题 */
+body.diary-page a {
+    color: #ff1493; /* 深粉色 */
+}
+body.diary-page a:hover {
+    color: #8a2be2; /* 悬停时变为蓝紫色 */
+}
+
+.retro-counter {
+    font-family: 'Courier New', 'PixelFont', monospace; /* 等宽字体是关键 */
+    color: #0f0; /* CRT 绿色 */
+    background-color: #111; /* 深色背景 */
+    border: 3px double #ff00ff; /* 千禧年风格的亮粉色双线边框 */
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3); /* 绿色辉光 */
+}
+
+.retro-counter strong {
+    color: #ffff00; /* 标题用亮黄色 */
+    text-shadow: 0 0 5px yellow;
+}
+
+#busuanzi_value_site_uv,
+#busuanzi_value_site_pv {
+    color: #00ffff; /* 数据用青色突出显示 */
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 0 0 8px cyan;
+}
+
+/* 添加一个经典的“闪烁光标”效果在计数器后 */
+.retro-counter p:first-of-type::after {
+    content: '_';
+    animation: blink 1s infinite;
+    color: #0f0;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
